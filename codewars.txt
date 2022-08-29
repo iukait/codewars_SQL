@@ -1,0 +1,22 @@
+****************************TASK*****************************
+
+SQL Basics: Simple EXISTS
+
+sales table schema
+id
+department_id (department foreign key)
+name
+price
+card_name
+card_number
+transaction_date
+resultant table schema
+id
+name
+
+------------------------------------------------------------
+-- Create your SELECT statement here
+SELECT d.id,d.name
+FROM departments d
+WHERE EXISTS (
+SELECT s.price From sales s WHERE d.id=s.department_id and price >98.00)
