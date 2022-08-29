@@ -1,7 +1,8 @@
 ****************************TASK*****************************
-
 SQL Basics: Simple EXISTS
-
+For this challenge you need to create a SELECT statement that will contain data about departments that had a sale with a price over 98.00 dollars. 
+This SELECT statement will have to use an EXISTS to achieve the task.
+------------------------------------------------------------
 sales table schema
 id
 department_id (department foreign key)
@@ -13,9 +14,7 @@ transaction_date
 resultant table schema
 id
 name
-
 ------------------------------------------------------------
--- Create your SELECT statement here
 SELECT d.id,d.name
 FROM departments d
 WHERE EXISTS (
